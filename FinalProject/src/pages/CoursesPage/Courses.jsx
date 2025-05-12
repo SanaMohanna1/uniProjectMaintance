@@ -5,7 +5,7 @@ function All_courses() {
 
   const fetchcourses = async () => {
     try {
-      const response = await fetch("http://localhost:3002/Courses");
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/Courses`);
       if (!response.ok) {
         throw new Error("Failed to fetch products");
       }

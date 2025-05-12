@@ -26,7 +26,7 @@ const CartItem = ({ item, onIncrease, onDecrease }) => {
 
 async function UpdateDatabase(data) {
   try {
-    const response = await fetch("http://localhost:3002/cart", {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/cart`, {
       method: "POST",
       mode: "cors",
       credentials: "include",
@@ -121,7 +121,7 @@ const Cart = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch("http://localhost:3002/cart", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/cart`, {
         method: "GET",
         credentials: "include",
       });
@@ -162,7 +162,7 @@ const Cart = () => {
 
   const handleOrder = async () => {
     try {
-      const response = await fetch("http://localhost:3002/cartToOrder", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/cartToOrder`, {
         method: "POST",
         credentials: "include",
       });

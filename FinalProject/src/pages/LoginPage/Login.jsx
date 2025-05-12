@@ -27,7 +27,7 @@ function Login() {
     }
 
     const body = { email, password };
-    const result = await fetch("http://localhost:3002/login", {
+    const result = await fetch(`${process.env.REACT_APP_API_URL}/login`, {
       method: "POST",
       credentials: "include",
       headers: { "Content-Type": "application/json" },

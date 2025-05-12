@@ -22,7 +22,7 @@ function Candels() {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch("http://localhost:3002/candels");
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/candels`);
       if (!response.ok) {
         throw new Error("Failed to fetch products");
       }
@@ -39,7 +39,7 @@ function Candels() {
 
 async function addToCart(item) {
   try {
-    const response = await fetch("http://localhost:3002/AddProductToCart", {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/AddProductToCart`, {
       method: "POST",
       credentials: "include",
       headers: { "Content-Type": "application/json" },

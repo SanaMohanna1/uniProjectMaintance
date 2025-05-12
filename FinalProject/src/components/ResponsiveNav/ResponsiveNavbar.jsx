@@ -24,7 +24,7 @@ const ResponsiveNavbar = () => {
   useEffect(() => {
     const checkLogin = async () => {
       try {
-        const res = await fetch("http://localhost:3002/checkAuth", {
+        const res = await fetch(`${process.env.REACT_APP_API_URL}/checkAuth`, {
           credentials: "include",
         });
         const data = await res.json();
@@ -79,7 +79,7 @@ const ResponsiveNavbar = () => {
             href="/logout"
             onClick={(e) => {
               e.preventDefault();
-              fetch("http://localhost:3002/logout", {
+              fetch(`${process.env.REACT_APP_API_URL}/logout`, {
                 method: "POST",
                 credentials: "include",
               }).then(() => {

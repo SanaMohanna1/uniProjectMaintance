@@ -19,7 +19,7 @@ export const ShowDetailsModal = ({ closeModal, defaultValue = {}, orderId }) => 
     if (orderId){
     const fetchProducts = async () => {
       try {
-        const response = await fetch(`http://localhost:3002/Getorder'sProduct/${orderId}`);
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/Getorder'sProduct/${orderId}`);
         if (!response.ok) {
           throw new Error('Failed to fetch products');
         }

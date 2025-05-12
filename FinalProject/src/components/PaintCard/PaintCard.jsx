@@ -26,7 +26,7 @@ function PaintCard() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("http://localhost:3002/paints");
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/paints`);
         if (!response.ok) {
           throw new Error("Failed to fetch products");
         }

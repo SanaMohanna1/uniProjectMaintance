@@ -11,7 +11,7 @@ const AccountSettings = () => {
 
   const fetchDetails = async () => {
     try {
-      const response = await fetch(`http://localhost:3002/userdetails`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/userdetails`, {
         method: 'GET',
         credentials: 'include',
       });
@@ -54,7 +54,7 @@ const AccountSettings = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`http://localhost:3002/userdetails`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/userdetails`, {
         method: 'PUT',
         credentials: 'include',
         headers: {

@@ -31,7 +31,7 @@ function Signup() {
         setError(true);
       } else {
         const body = { email, username, password, address, postalcode };
-        const result = await fetch("http://localhost:3002/signup", {
+        const result = await fetch(`${process.env.REACT_APP_API_URL}/signup`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(body),

@@ -16,7 +16,7 @@ const ChangePassword = () => {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const response = await fetch('http://localhost:3002/userdetails', {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/userdetails`, {
           method: 'GET',
           credentials: 'include',
         });
@@ -51,7 +51,7 @@ const ChangePassword = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`http://localhost:3002/userpassword`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/userpassword`, {
         method: 'PUT',
         credentials: 'include',
         headers: {
