@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -9,6 +10,7 @@ const multer = require("multer");
 const path = require("path");
 const fs = require("fs");
 const cookieParser = require("cookie-parser");
+console.log("🌱 Loaded DB URL:", process.env.DATABASE_URL);
 
 app.use(cookieParser());
 const corsOptions = {
@@ -18,6 +20,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.use(express.json());
+
 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "http://localhost:3000"); // Allows requests from this origin
