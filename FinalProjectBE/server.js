@@ -1,39 +1,39 @@
-require('dotenv').config();
+require("dotenv").config();
 const express = require("express");
-const bodyParser = require("body-parser");
 const cors = require("cors");
+const cookieParser = require("cookie-parser");
 const app = express();
 const port = 3002;
+
 const db = require("./Database/connection");
 const bcrypt = require("bcrypt");
 const multer = require("multer");
 const path = require("path");
 const fs = require("fs");
-const cookieParser = require("cookie-parser");
+
 console.log("🌱 Loaded DB URL:", process.env.DATABASE_URL);
+
+// ✅ Allow both localhost (for development) and Vercel (for production)
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://art-planet.vercel.app"
+];
+
 app.use(cors({
-  origin: "https://art-planet.vercel.app", // your frontend URL
-  credentials: true // allow cookies/sessions
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    } else {
+      return callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true
 }));
 
 app.use(cookieParser());
-const corsOptions = {
-  origin: "http://localhost:3000", // Allow only this origin to access
-  credentials: true, // Allow cookies / credentials
-};
-app.use(cors(corsOptions));
-
 app.use(express.json());
 
 
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "http://localhost:3000"); // Allows requests from this origin
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-  res.header("Access-Control-Allow-Headers", "Content-Type");
-  // Add this line to include credentials in the CORS policy
-  res.header("Access-Control-Allow-Credentials", "true");
-  next();
-});
 
 app.listen(port, () => {
   console.log(`Server runing on port ${port}`);
