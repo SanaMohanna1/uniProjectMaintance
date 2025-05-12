@@ -1,0 +1,112 @@
+.cart-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fef4e5; 
+    padding: 20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1); 
+    border-radius: 8px; 
+  }
+  
+  .cart-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd; /* Light border for each item */
+    border-radius: 8px; /* Slightly rounded corners for the items */
+    background: #ffffff; /* White background for content */
+  }
+  
+  .cart-item-image {
+    width: 80px; /* Fixed size for the image */
+    height: 80px;
+    object-fit: cover; /* Ensure the image covers the area */
+    border-radius: 4px; /* Slightly rounded corners for the images */
+    margin-right: 15px;
+  }
+  
+  .cart-item-info {
+    flex-grow: 1;
+    padding: 0 15px;
+  }
+  
+  .cart-item-title {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .cart-item-price {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .cart-item-quantity {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-item-quantity button {
+    background: #f0f0f0;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    color: #333;
+    border-radius: 4px; /* Slightly rounded corners for the buttons */
+  }
+  
+  .cart-item-quantity input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px 10px;
+  }
+  
+  .cart-total {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+    margin: 20px 0;
+  }
+  
+  .cart-checkout-btn {
+    width: 100%;
+    padding: 10px;
+    background: #FFD700; /* Golden color for the button */
+    color: #333;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 8px; /* Slightly rounded corners for the button */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Slightly deeper shadow for the button */
+  }
+  
+  /* Additional styles for the header/navigation if needed */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #333;
+    color: white;
+  }
+  
+  .header a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+  }
+  
+  .header .cart-icon {
+    font-size: 24px;
+  }

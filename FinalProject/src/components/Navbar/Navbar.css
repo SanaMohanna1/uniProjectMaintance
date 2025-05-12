@@ -1,0 +1,121 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.navbar {
+background-color: white;
+color: black;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 2rem;
+padding: 0 1rem;
+box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+position: fixed; /* Stick navbar to top */
+top: 0;
+z-index: 1000;
+width: 100vw; 
+
+}
+
+
+.site-title {
+  background-color: white;
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: .25rem;
+ font-size: 2rem; 
+}
+
+.navbar ul.active {
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar .HomePageLink , .CoursesPageLink , .AboutUsPageLink , .ProductsPageLink , .CartPageLink , .ProfilePageLink {
+  background-color: white;
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: .25rem;
+}
+
+.navbar li.active {
+  background-color: white;
+  }
+.navbar li.hover {
+background-color: #d1cccc;
+}
+
+
+.navbar  .fa-shopping-cart{
+  background-color: white;
+  color: #000000;
+  padding: 10px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  line-height: 50px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.navbar .fa-user{
+  background-color: white;
+  color: #000000;
+  padding: 10px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  line-height: 50px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.navbar .artIcon{
+  background-color: white;
+  color: #000000;
+  padding: 10px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  line-height: 50px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+ul li a.AboutUsPageLink:hover{
+  background: #d1cccc;
+}
+ul li a.HomePageLink:hover{
+  background: #d1cccc;
+}
+ul li a.ProductsPageLink:hover{
+  background: #d1cccc;
+}
+ul li  a.CoursesPageLink:hover{
+  background: #d1cccc;
+}
+ul li .fa-shopping-cart:hover{
+  background: #d1cccc;
+}
+ul li .fa-user:hover{
+  background: #d1cccc;
+}
+
+
+
+
+

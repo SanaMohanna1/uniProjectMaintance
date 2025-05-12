@@ -1,0 +1,101 @@
+.footer {
+  background-color: white;
+  color: rgb(59, 55, 55);
+  padding: 0.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.footer-content {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  align-items: flex-start;
+}
+
+.footer-links {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links-div {
+  background-color: white;
+  margin: 1rem;
+  margin-left: 5rem;
+  justify-content: space-between;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.classA {
+  background-color: white;
+  color: rgb(59, 55, 55);
+  text-decoration: none;
+  margin: 0.5rem 0;
+}
+
+.H2_{
+margin-left: 2rem;
+}
+
+.H2_ , .H4_ {
+  background-color: white;
+}
+
+.classA:hover {
+  background-color: white;
+  color: #b7b2b2;
+}
+
+
+.social-media{
+  background-color: white;
+  display: inline;
+}
+
+ .social-media .insta , .face , .whats {
+  background-color: white;
+  display: inline-flex;
+  margin-right: 10px;
+ }
+ .social-media p{
+  background-color: white;
+ }
+
+ .contact-info {
+  background-color: white;
+  display: flex;
+  flex-direction: column; 
+}
+
+.contact-info .email-info, .location-info {
+  background-color: white;
+  display: flex;
+  align-items: center; 
+  margin: 0.5rem; 
+}
+
+.contact-info .email-info , .email_ , .location-info , .location_ , span {
+  background-color: white;
+  margin-right: 0.5rem; 
+  font-size: 1rem; 
+}
+ .footer-below {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.2rem;
+}
+
+
+.footer-below_p {
+  background-color:white;
+  font-size: 12x;
+  line-height: 5px;
+  font-weight: 600;
+}

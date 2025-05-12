@@ -1,0 +1,88 @@
+.modal-container {
+  position: fixed;
+  border: 2px solid red;
+  z-index: 100; /* Make sure this is above all other content */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto; /* Enable scrolling if the modal content is larger than the screen */
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items:center; /* Align items to the top to see the top part of the modal */
+  justify-content: center;
+  padding-top: 2rem; /* Add space on the top to not stick to the edge */
+}
+
+.modal {
+  min-width: 10rem; /* minimum width */
+  min-height: 10rem; /* minimum height */
+  display: flex; /* Use flexbox to center content */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  border-radius: 5px;
+  padding: 2rem;
+  z-index: 101;
+  background-color: white;
+  width: auto; /* Use auto width for flexibility */
+  max-width: 50em; /* Max width to ensure it doesn't get too wide on large screens */
+  max-height: calc(100% - 4rem); /* Max height to ensure some margin from top and bottom */
+  overflow-y: auto; /* Enable scrolling inside the modal if content is larger than its max height */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow for better visual hierarchy */
+}
+
+.modal .btn {
+  display: block;
+  margin: auto;
+}
+
+
+.error {
+  background-color: #f8d7da;
+  color: #df4759;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .modal {
+    width: 95%; /* Use more width on smaller screens */
+    max-width: none; /* Remove max-width restriction */
+  }
+  .product-table table {
+    width: 100%;
+    display: block;
+    overflow-x: auto; /* Allows table to scroll horizontally on small screens */
+  }
+}
+
+/* Zebra Stripes for Table Rows */
+.product-table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9; /* Light color for odd rows */
+}
+
+.product-table tbody tr:nth-child(even) {
+  background-color: #e9e9e9; /* Slightly different light color for even rows */
+}
+
+/* Headings Styling */
+.product-table thead th {
+  background-color: #333; /* Dark background for contrast */
+  color: white; /* White text for readability */
+  font-weight: bold;
+  padding: 0.6rem 0.4rem; /* More padding for header cells */
+}
+
+/* Cell Styling */
+.product-table td {
+  padding: 0.5rem; /* Adequate padding for table cells */
+  border-bottom: 1px solid #ddd; /* Slight border for each cell */
+}
+
+/* Fixed Table Header */
+.product-table thead th {
+  position: sticky;
+  top: 0; /* Stick to the top of the table */
+  z-index: 10; /* Make sure it's above other content */
+}

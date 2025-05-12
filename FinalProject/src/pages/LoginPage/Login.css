@@ -1,0 +1,93 @@
+/* Page wrapper */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f4f4f4, #eaeaea);
+  font-family: 'Poppins', sans-serif;
+  padding: 0 20px;
+}
+
+/* Login card */
+.login {
+  width: 100%;
+  max-width: 420px;
+  padding: 40px 30px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Title */
+.title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Inputs */
+.email,
+.password {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border 0.3s;
+}
+
+.email:focus,
+.password:focus {
+  border-color: #cba897;
+  outline: none;
+}
+
+/* Error message */
+.error-message {
+  color: #e74c3c;
+  font-size: 13px;
+  background: #fdecea;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #e0b4b4;
+  border-radius: 6px;
+}
+
+/* Submit button */
+.submitLogin {
+  width: 100%;
+  padding: 14px;
+  background-color: #cba897;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submitLogin:hover {
+  background-color: #b78d79;
+  box-shadow: 0 4px 10px rgba(203, 168, 151, 0.3);
+}
+
+/* Link button */
+.link-btn {
+  margin-top: 20px;
+  background: transparent;
+  border: none;
+  color: #666;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 13px;
+  transition: color 0.2s;
+}
+
+.link-btn:hover {
+  color: #cba897;
+}

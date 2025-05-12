@@ -1,0 +1,72 @@
+/* Original style for .CoursesCard-item, with white background color set by default */
+.CoursesCard-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.3s ease transform;
+    background-color: #fef4e5; /* Light pink color */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* New style for even-numbered .CoursesCard-item, to set the background color to pink */
+.CoursesCard-item:nth-child(even) {
+    background-color: rgb(255, 255, 255); /* White color by default */
+}
+
+
+
+/* Rest of the styles remain unchanged */
+.CoursesCard-item img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    margin-left: 20px;
+}
+
+.CoursesCard-text {
+    padding: 10px;
+    flex-grow: 1;
+}
+
+.CoursesCard-text h3, .CoursesCard-text h6, .CoursesCard-text p {
+    margin: 0;
+    padding: 3px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .CoursesCard-item {
+        flex-direction: column;
+        margin: 10px 2%;
+    }
+
+    .CoursesCard-item img {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+
+    .CoursesCard-text {
+        text-align: left;
+    }
+
+    .CoursesCard-text h6, .CoursesCard-text h3 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .CoursesCard-item {
+        padding: 5px;
+    }
+    
+    .CoursesCard-text h6, .CoursesCard-text h3 {
+        font-size: 12px;
+    }
+}

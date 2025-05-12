@@ -1,0 +1,95 @@
+.Address_settings{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.Address_settings h1{
+    padding: 10px 20px;
+}
+
+
+.Address_settings .form_address{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.Address_settings .form_address .form-group_address{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin: 10px;
+}
+
+.Address_settings .form_address .form-group_address label{
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.Address_settings .form_address .form-group_address input{
+    padding: 10px 20px;
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 5px;
+    outline: none;
+    width: auto;
+}
+
+.Address_settings .form_address .form-group_address input:focus{
+    border: 1px solid var(--col1);
+}
+
+.Address_settings .mainbutton1 {
+  padding: 12px 24px;
+  background-color: #cba897;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.Address_settings .mainbutton1:hover {
+  background-color: #b78d79;
+  box-shadow: 0 4px 12px rgba(203, 168, 151, 0.4);
+}
+
+.Address_settings .mainbutton1:active {
+  transform: scale(0.98);
+}
+
+
+@media (max-width: 800px){
+    .Address_settings .form_address{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .Address_settings .form_address .form-group_address{
+        display: flex;
+        flex-direction: column;
+        width: 97%;
+        margin: 10px;
+    }
+    .Address_settings h1{
+        font-size: 20px;
+    }
+    .Address_settings .form_address .form-group_address label{
+        font-size: 16px;
+        font-weight: 300;
+        margin-bottom: 5px;
+    }
+} 
