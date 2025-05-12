@@ -11,6 +11,10 @@ const path = require("path");
 const fs = require("fs");
 const cookieParser = require("cookie-parser");
 console.log("🌱 Loaded DB URL:", process.env.DATABASE_URL);
+app.use(cors({
+  origin: "https://art-planet.vercel.app", // your frontend URL
+  credentials: true // allow cookies/sessions
+}));
 
 app.use(cookieParser());
 const corsOptions = {
